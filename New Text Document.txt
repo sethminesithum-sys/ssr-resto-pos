@@ -1,0 +1,23 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJzZXRobWluZXNpdGh1bUBnbWFpbC5jb20iLCJpYXQiOjE3OTM5NDUzMDQsImV4cCI6MTc5Mzk4ODUwNH0.EP__eiSUUPUhoah2g90o03lgndc7HY3BIRQG-iWkkQQ
+
+
+('SSR-PRO-001', 7, 0), ('SSR-PRO-002', 7, 0), ('SSR-PRO-003', 7, 0), ('SSR-PRO-004', 7, 0), ('SSR-PRO-005', 7, 0),
+('SSR-PRO-006', 7, 0), ('SSR-PRO-007', 7, 0), ('SSR-PRO-008', 7, 0), ('SSR-PRO-009', 7, 0), ('SSR-PRO-010', 7, 0),
+('SSR-PRO-011', 7, 0), ('SSR-PRO-012', 7, 0), ('SSR-PRO-013', 7, 0), ('SSR-PRO-014', 7, 0), ('SSR-PRO-015', 7, 0),
+('SSR-PRO-016', 7, 0), ('SSR-PRO-017', 7, 0), ('SSR-PRO-018', 7, 0), ('SSR-PRO-019', 7, 0), ('SSR-PRO-020', 7, 0),
+('SSR-PRO-021', 7, 0), ('SSR-PRO-022', 7, 0), ('SSR-PRO-023', 7, 0), ('SSR-PRO-024', 7, 0), ('SSR-PRO-025', 7, 0),
+('SSR-PRO-026', 7, 0), ('SSR-PRO-027', 7, 0), ('SSR-PRO-028', 7, 0), ('SSR-PRO-029', 7, 0), ('SSR-PRO-030', 7, 0),
+('SSR-PRO-031', 7, 0), ('SSR-PRO-032', 7, 0), ('SSR-PRO-033', 7, 0), ('SSR-PRO-034', 7, 0), ('SSR-PRO-035', 7, 0),
+('SSR-PRO-036', 7, 0), ('SSR-PRO-037', 7, 0), ('SSR-PRO-038', 7, 0), ('SSR-PRO-039', 7, 0), ('SSR-PRO-040', 7, 0),
+('SSR-PRO-041', 7, 0), ('SSR-PRO-042', 7, 0), ('SSR-PRO-043', 7, 0), ('SSR-PRO-044', 7, 0), ('SSR-PRO-045', 7, 0),
+('SSR-PRO-046', 7, 0), ('SSR-PRO-047', 7, 0), ('SSR-PRO-048', 7, 0), ('SSR-PRO-049', 7, 0), ('SSR-PRO-050', 7, 0),
+('SSR-PRO-051', 7, 0), ('SSR-PRO-052', 7, 0), ('SSR-PRO-053', 7, 0), ('SSR-PRO-054', 7, 0), ('SSR-PRO-055', 7, 0),
+('SSR-PRO-056', 7, 0), ('SSR-PRO-057', 7, 0), ('SSR-PRO-058', 7, 0), ('SSR-PRO-059', 7, 0), ('SSR-PRO-060', 7, 0),
+('SSR-PRO-061', 7, 0), ('SSR-PRO-062', 7, 0), ('SSR-PRO-063', 7, 0), ('SSR-PRO-064', 7, 0), ('SSR-PRO-065', 7, 0),
+('SSR-PRO-066', 7, 0), ('SSR-PRO-067', 7, 0), ('SSR-PRO-068', 7, 0), ('SSR-PRO-069', 7, 0), ('SSR-PRO-070', 7, 0),
+('SSR-PRO-071', 7, 0), ('SSR-PRO-072', 7, 0), ('SSR-PRO-073', 7, 0), ('SSR-PRO-074', 7, 0), ('SSR-PRO-075', 7, 0),
+('SSR-PRO-076', 7, 0), ('SSR-PRO-077', 7, 0), ('SSR-PRO-078', 7, 0), ('SSR-PRO-079', 7, 0), ('SSR-PRO-080', 7, 0),
+('SSR-PRO-081', 7, 0), ('SSR-PRO-082', 7, 0), ('SSR-PRO-083', 7, 0), ('SSR-PRO-084', 7, 0), ('SSR-PRO-085', 7, 0),
+('SSR-PRO-086', 7, 0), ('SSR-PRO-087', 7, 0), ('SSR-PRO-088', 7, 0), ('SSR-PRO-089', 7, 0), ('SSR-PRO-090', 7, 0),
+('SSR-PRO-091', 7, 0), ('SSR-PRO-092', 7, 0), ('SSR-PRO-093', 7, 0), ('SSR-PRO-094', 7, 0), ('SSR-PRO-095', 7, 0),
+('SSR-PRO-096', 7, 0), ('SSR-PRO-097', 7, 0), ('SSR-PRO-098', 7, 0), ('SSR-PRO-099', 7, 0), ('SSR-PRO-100', 7, 0);
