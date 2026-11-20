@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { ShieldCheck, Mail, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 export default function VerifyEmail() {
     const navigate = useNavigate();
     const location = useLocation();
@@ -19,7 +19,7 @@ export default function VerifyEmail() {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/verify-otp', {
+            const response = await axios.post(`${API_URL}/api/verify-otp`, {
                 email,
                 otp: code
             });

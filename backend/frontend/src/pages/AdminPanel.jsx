@@ -3,7 +3,7 @@ import {
   ShieldCheck, Users, AlertCircle, Trash2, Ban, CheckCircle2, 
   Megaphone, Send, LogOut, DollarSign, RefreshCw, Store, Lock, User
 } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const AdminPanel = () => {
   // 🚀 Admin Authentication State
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(() => {
@@ -42,15 +42,15 @@ const AdminPanel = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const restoRes = await fetch('http://localhost:5000/api/admin/restaurants');
+      const restoRes = await fetch(`${API_URL}/api/admin/restaurants`);
       const restoData = await restoRes.json();
       if (restoData.success) setRestaurants(restoData.data);
 
-      const compRes = await fetch('http://localhost:5000/api/admin/complaints');
+      const compRes = await fetch(`${API_URL}/api/admin/complaints`);
       const compData = await compRes.json();
       if (compData.success) setComplaints(compData.data);
 
-      const statsRes = await fetch('http://localhost:5000/api/admin/financial-stats');
+      const statsRes = await fetch(`${API_URL}/api/admin/financial-stats`);
       const statsData = await statsRes.json();
       if (statsData.success) setFinancialStats(statsData.stats);
     } catch (err) {

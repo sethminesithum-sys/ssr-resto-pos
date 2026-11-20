@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Plus, Package } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [name, setName] = useState('');
@@ -13,7 +13,7 @@ const Products = () => {
   // ඩේටබේස් එකෙන් Products ලෝඩ් කිරීම
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/products');
+      const res = await axios.get(`${API_URL}/api/products`);
       setProducts(res.data);
     } catch (err) {
       console.error('Products fetch error:', err);
@@ -31,7 +31,7 @@ const Products = () => {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/products', {
+      await axios.post(`${API_URL}/api/products`, {
         name,
         barcode: barcode || 'N/A',
         price: parseFloat(price),

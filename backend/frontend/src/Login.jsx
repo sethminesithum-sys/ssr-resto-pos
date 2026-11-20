@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { LogIn, Phone, KeyRound } from 'lucide-react';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const Login = () => {
   const [step, setStep] = useState(1); // 1: Send OTP, 2: Verify & Login
   const [email, setEmail] = useState('');
@@ -18,7 +19,7 @@ const Login = () => {
     setMessage('');
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/send-otp', { email });
+      const res = await axios.post(`${API_URL}/api/auth/login`, { email, password });
       setMessage(res.data.message || 'OTP යවන ලදී!');
       setStep(2);
     } catch (err) {
@@ -35,7 +36,7 @@ const Login = () => {
     setMessage('');
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post(`${API_URL}/api/auth/send-otp`, { email });
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
       setMessage('ලොග් වීම සාර්ථකයි!');

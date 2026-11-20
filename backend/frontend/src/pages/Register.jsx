@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Store, Mail, Lock, User, Phone, ArrowRight, AlertCircle } from 'lucide-react';
-
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ const Register = () => {
       setLoading(true);
 
       // 🚀 බෑක්-එන්ඩ් එකේ /api/register එන්ඩ්පොයින්ට් එකට ඩේටා යැවීම (මෙතනින් තමයි Nodemailer එකෙන් ඊමේල් එක යවන්නේ)
-      const response = await fetch('http://localhost:5000/api/register', {
+      const response = await fetch(`${API_URL}/api/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
