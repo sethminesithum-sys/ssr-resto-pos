@@ -16,14 +16,32 @@ mongoose.connect(MONGO_URI)
   .then(() => console.log('🔥 MongoDB Connected Successfully!'))
   .catch(err => console.error('❌ DB Connection Error:', err.message));
 
-// Nodemailer Transporter Setup
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS
+async function sendOtpViaResend({ to, subject, html }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is missing");
   }
-});
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: "SSR Resto POS <onboarding@resend.dev>",
+      to: [to],
+      subject,
+      html,
+    }),
+  });
+
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(data.message || "Failed to send email via Resend");
+  }
+  return data;
+}
 
 // Store OTP temporarily in memory for secure verification
 const otpStorage = {};
@@ -116,13 +134,16 @@ app.post('/api/register', async (req, res) => {
         `
       };
       
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.error('Email send error:', error);
-        } else {
-          console.log('Email sent:', info.response);
-        }
-      });
+     try {
+  const info = await sendOtpViaResend({
+    to: mailOptions.to,
+    subject: mailOptions.subject,
+    html: mailOptions.html,
+  });
+  console.log("Email sent:", info.id || info);
+} catch (error) {
+  console.error("Email send error:", error.message || error);
+}
     }
 
     res.status(200).json({ 
